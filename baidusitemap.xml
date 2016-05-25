@@ -2,10 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     
-    
   <url>
     <loc>http://yoursite.com/2016/05/25/R%E8%AF%AD%E8%A8%80WEB%E7%89%88IDE%E7%9B%B8%E5%85%B3%E8%B0%83%E7%A0%94/</loc>
-    <lastmod>2016-05-25T08:18:36.327Z</lastmod>
+    <lastmod>2016-05-25T09:57:27.733Z</lastmod>
     <data>
         <display>
         <title>R语言WEB版IDE相关调研</title>
@@ -22,6 +21,7 @@
     </data>
     </url>
 
+    
     
   <url>
     <loc>http://yoursite.com/2016/05/25/CentOS6.3%E4%B8%8B%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AEGuacamole%200.9.9/</loc>
