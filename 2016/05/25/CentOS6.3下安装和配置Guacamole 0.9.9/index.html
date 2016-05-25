@@ -18,7 +18,7 @@
 <meta property="og:site_name" content="桂圆大叔的博客">
 <meta property="og:description" content="Guacamole是一个提供远程桌面解决方案的开源项目，通过浏览器就能操作虚拟机，适用于Chrome、Firefox、IE9+等浏览器（浏览器需要支持HTML5）。只要在一个服务器成功安装Guancamole，就可以通过访问一个web浏览器去操作我们配置好的虚拟机…">
 <meta property="og:image" content="http://guac-dev.org/doc/gug/images/guac-arch.png">
-<meta property="og:updated_time" content="2016-05-25T08:06:26.334Z">
+<meta property="og:updated_time" content="2016-05-25T08:17:07.600Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CentOS6.3下安装和配置Guacamole 0.9.9">
 <meta name="twitter:description" content="Guacamole是一个提供远程桌面解决方案的开源项目，通过浏览器就能操作虚拟机，适用于Chrome、Firefox、IE9+等浏览器（浏览器需要支持HTML5）。只要在一个服务器成功安装Guancamole，就可以通过访问一个web浏览器去操作我们配置好的虚拟机…">
@@ -283,13 +283,9 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><excerpt in="" index="" |="" 首页摘要=""><br>Guacamole是一个提供远程桌面解决方案的开源项目，通过浏览器就能操作虚拟机，适用于Chrome、Firefox、IE9+等浏览器（浏览器需要支持HTML5）。只要在一个服务器成功安装Guancamole，就可以通过访问一个web浏览器去操作我们配置好的虚拟机…</excerpt></p>
-<ul>
-<li><a id="more"></a>
+        <p><excerpt in="" index="" |="" 首页摘要=""><br>Guacamole是一个提供远程桌面解决方案的开源项目，通过浏览器就能操作虚拟机，适用于Chrome、Firefox、IE9+等浏览器（浏览器需要支持HTML5）。只要在一个服务器成功安装Guancamole，就可以通过访问一个web浏览器去操作我们配置好的虚拟机…<br><a id="more"></a></excerpt></p>
 <the rest="" of="" contents="" |="" 余下全文="">
 
-</the></li>
-</ul>
 <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Guacamole是一个提供远程桌面解决方案的开源项目，通过浏览器就能操作虚拟机，适用于Chrome、Firefox、IE9+等浏览器（浏览器需要支持HTML5）。只要在一个服务器成功安装Guancamole，就可以通过访问一个web浏览器去操作我们配置好的虚拟机。当然，作为一个开源的项目，我们可以对Guacamole做相应的定制修改，使其适配我们的项目需求，比如做成自动登录的，加上项目权限验证等。</p>
 <p>Guacamole一基于HTML5的远程桌面控制框架，性能较高，官方说接近于原生的VNC，Guacamole不是一个独立的Web应用程序，而是由许多部件组成的。Web应用程序实际上是整个项目里最小最轻量的，大部分的功能依靠Guacamole的底层组件来完成，整个项目的构建如下图:</p>
 <p><img src="http://guac-dev.org/doc/gug/images/guac-arch.png" alt="图片一"></p>
@@ -335,7 +331,7 @@
 <p>接下来配置<code>user-mapping.xml</code>，该XML文件的根节点为<code>&lt;user-mapping&gt;</code>，向其中插入如下内容，每一个<code>&lt;authorize&gt;</code>节点为一个用户配置，每一个<code>&lt;connection&gt;</code>节点为一个授权链接配置：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 每名用户的配置信息和权限 --&gt;</span><br><span class="line">&lt;authorize username=&quot;USERNAME&quot; password=&quot;PASSWORD&quot;&gt;</span><br><span class="line">    &lt;protocol&gt;vnc&lt;/protocol&gt;</span><br><span class="line">    &lt;param name=&quot;hostname&quot;&gt;localhost&lt;/param&gt;</span><br><span class="line">    &lt;param name=&quot;port&quot;&gt;5900&lt;/param&gt;</span><br><span class="line">    &lt;param name=&quot;password&quot;&gt;VNCPASS&lt;/param&gt;</span><br><span class="line">&lt;/authorize&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 另一个用户，该用户采用MD5加密 --&gt;</span><br><span class="line">&lt;authorize </span><br><span class="line">        username=&quot;USERNAME2&quot;</span><br><span class="line">        password=&quot;319f4d26e3c536b5dd871bb2c52e3178&quot;</span><br><span class="line">        encoding=&quot;md5&quot;&gt;</span><br><span class="line"></span><br><span class="line">    &lt;!-- 第一个授权链接 --&gt;</span><br><span class="line">    &lt;connection name=&quot;localhost&quot;&gt;</span><br><span class="line">        &lt;protocol&gt;ssh&lt;/protocol&gt;</span><br><span class="line">        &lt;param name=&quot;hostname&quot;&gt;localhost&lt;/param&gt;</span><br><span class="line">        &lt;param name=&quot;port&quot;&gt;22&lt;/param&gt;</span><br><span class="line">        &lt;param name=&quot;password&quot;&gt;VNCPASS&lt;/param&gt;</span><br><span class="line">    &lt;/connection&gt;</span><br><span class="line"></span><br><span class="line">    &lt;!-- 第二个授权链接 --&gt;</span><br><span class="line">    &lt;connection name=&quot;otherhost&quot;&gt;</span><br><span class="line">        &lt;protocol&gt;vnc&lt;/protocol&gt;</span><br><span class="line">        &lt;param name=&quot;hostname&quot;&gt;otherhost&lt;/param&gt;</span><br><span class="line">        &lt;param name=&quot;port&quot;&gt;5900&lt;/param&gt;</span><br><span class="line">        &lt;param name=&quot;password&quot;&gt;VNCPASS&lt;/param&gt;</span><br><span class="line">    &lt;/connection&gt;</span><br><span class="line"></span><br><span class="line">&lt;/authorize&gt;</span><br></pre></td></tr></table></figure></p>
 <p>配置文件配置好之后，我们需要修改<code>/etc/profile</code>，向文件内末尾追加<code>export GUACAMOLE_HOME=/etc/guacamole</code>，保存修改后，执行<code>source /etc/profile</code>，使其生效，以保证Guacamole能够从系统环境变量中找到<code>guacamole.properties</code>的位置。</p>
 <h2 id="验证Guacamole服务"><a href="#验证Guacamole服务" class="headerlink" title="验证Guacamole服务"></a>验证Guacamole服务</h2><p>最后启动tomcat和guacd服务，服务启动完毕后，我们就可以验证我们的Guacamole服务了，在WEB浏览器中输入以下URL：<code>http://服务IP地址:8080/guacamole/</code>。然后，在登录页面中输入配置好的用户名/密码（authorize节点内的用户名/密码）即可通过WEB页面连接至远程服务。</p>
-
+</the>
       
     </div>
     
@@ -346,7 +342,7 @@
         <p><span>本文标题:</span><a href="/2016/05/25/CentOS6.3下安装和配置Guacamole 0.9.9/">CentOS6.3下安装和配置Guacamole 0.9.9</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">桂圆大叔</a></p>
         <p><span>发布时间:</span>2016-05-25, 15:41:02</p>
-        <p><span>最后更新:</span>2016-05-25, 16:06:26</p>
+        <p><span>最后更新:</span>2016-05-25, 16:17:07</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/05/25/CentOS6.3下安装和配置Guacamole 0.9.9/" title="CentOS6.3下安装和配置Guacamole 0.9.9">http://yoursite.com/2016/05/25/CentOS6.3下安装和配置Guacamole 0.9.9/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/05/25/CentOS6.3下安装和配置Guacamole 0.9.9/　　作者: 桂圆大叔" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
