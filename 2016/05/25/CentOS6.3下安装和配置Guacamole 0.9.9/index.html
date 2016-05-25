@@ -11,17 +11,17 @@
   
   <title>CentOS6.3下安装和配置Guacamole 0.9.9 | 桂圆大叔的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="##简介Guacamole是一个提供远程桌面解决方案的开源项目，通过浏览器就能操作虚拟机，适用于Chrome、Firefox、IE9+等浏览器（浏览器需要支持HTML5）。只要在一个服务器成功安装Guancamole，就可以通过访问一个web浏览器去操作我们配置好的虚拟机。当然，作为一个开源的项目，我们可以对Guacamole做相应的定制修改，使其适配我们的项目需求，比如做成自动登录的，加上项目权">
+  <meta name="description">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CentOS6.3下安装和配置Guacamole 0.9.9">
 <meta property="og:url" content="http://yoursite.com/2016/05/25/CentOS6.3下安装和配置Guacamole 0.9.9/index.html">
 <meta property="og:site_name" content="桂圆大叔的博客">
-<meta property="og:description" content="##简介Guacamole是一个提供远程桌面解决方案的开源项目，通过浏览器就能操作虚拟机，适用于Chrome、Firefox、IE9+等浏览器（浏览器需要支持HTML5）。只要在一个服务器成功安装Guancamole，就可以通过访问一个web浏览器去操作我们配置好的虚拟机。当然，作为一个开源的项目，我们可以对Guacamole做相应的定制修改，使其适配我们的项目需求，比如做成自动登录的，加上项目权">
+<meta property="og:description">
 <meta property="og:image" content="http://guac-dev.org/doc/gug/images/guac-arch.png">
-<meta property="og:updated_time" content="2016-05-25T07:42:42.975Z">
+<meta property="og:updated_time" content="2016-05-25T07:48:05.499Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CentOS6.3下安装和配置Guacamole 0.9.9">
-<meta name="twitter:description" content="##简介Guacamole是一个提供远程桌面解决方案的开源项目，通过浏览器就能操作虚拟机，适用于Chrome、Firefox、IE9+等浏览器（浏览器需要支持HTML5）。只要在一个服务器成功安装Guancamole，就可以通过访问一个web浏览器去操作我们配置好的虚拟机。当然，作为一个开源的项目，我们可以对Guacamole做相应的定制修改，使其适配我们的项目需求，比如做成自动登录的，加上项目权">
+<meta name="twitter:description">
 <meta name="twitter:image" content="http://guac-dev.org/doc/gug/images/guac-arch.png">
   
     <link rel="alternative" href="/atom.xml" title="桂圆大叔的博客" type="application/atom+xml">
@@ -283,7 +283,14 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>##简介<br>Guacamole是一个提供远程桌面解决方案的开源项目，通过浏览器就能操作虚拟机，适用于Chrome、Firefox、IE9+等浏览器（浏览器需要支持HTML5）。只要在一个服务器成功安装Guancamole，就可以通过访问一个web浏览器去操作我们配置好的虚拟机。当然，作为一个开源的项目，我们可以对Guacamole做相应的定制修改，使其适配我们的项目需求，比如做成自动登录的，加上项目权限验证等。</p>
+        <p><excerpt in="" index="" |="" 首页摘要=""> </excerpt></p>
+<ul>
+<li><a id="more"></a>
+<the rest="" of="" contents="" |="" 余下全文="">
+
+</the></li>
+</ul>
+<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Guacamole是一个提供远程桌面解决方案的开源项目，通过浏览器就能操作虚拟机，适用于Chrome、Firefox、IE9+等浏览器（浏览器需要支持HTML5）。只要在一个服务器成功安装Guancamole，就可以通过访问一个web浏览器去操作我们配置好的虚拟机。当然，作为一个开源的项目，我们可以对Guacamole做相应的定制修改，使其适配我们的项目需求，比如做成自动登录的，加上项目权限验证等。</p>
 <p>Guacamole一基于HTML5的远程桌面控制框架，性能较高，官方说接近于原生的VNC，Guacamole不是一个独立的Web应用程序，而是由许多部件组成的。Web应用程序实际上是整个项目里最小最轻量的，大部分的功能依靠Guacamole的底层组件来完成，整个项目的构建如下图:</p>
 <p><img src="http://guac-dev.org/doc/gug/images/guac-arch.png" alt="图片一"></p>
 <p>从上图可以看出，guacamole结构上分为4层，建议先阅读下 <a href="http://guac-dev.org/doc/gug/guacamole-architecture.html" target="_blank" rel="external">http://guac-dev.org/doc/gug/guacamole-architecture.html</a> 和 <a href="http://guac-dev.org/doc/gug/guacamole-protocol.html，就可以对Guacamole的架构和协议有个基本的认识。" target="_blank" rel="external">http://guac-dev.org/doc/gug/guacamole-protocol.html，就可以对Guacamole的架构和协议有个基本的认识。</a></p>
@@ -301,8 +308,7 @@
 </ul>
 </blockquote>
 <p>而关于Guacamole的协议 ，JS与JavaServlet，Servlet与guacd交互，都是采用这种格式。</p>
-<p>##部署环境和优势</p>
-<blockquote>
+<h2 id="部署环境和优势"><a href="#部署环境和优势" class="headerlink" title="部署环境和优势"></a>部署环境和优势</h2><blockquote>
 <ul>
 <li>Guacamole完全基于浏览器，不必安装JRE、RDP、VNV等客户端插件，不需要考虑客户的机器环境；</li>
 <li>Guacamole可以通过一台授权机器管理多台服务器，免于多个管理端登录；</li>
@@ -311,16 +317,12 @@
 <li>Guacamole基于HTML5的远程桌面控制框架，性能较高，官方说接近于原生的VNC，对于一些临时性管理和查看任务足够了；</li>
 </ul>
 </blockquote>
-<p>##安装环境说明</p>
-<p>操作系统：CentOS6.3 x86-64<br>JDK：JDK6<br>Tomcat：Tomcat7<br>Guacamole服务器：guacamole-server-0.9.9.tar.gz<br>Guacamole客户端：guacamole-0.9.9.war</p>
-<p>##安装JDK和Tomcat<br>JDK和Tomcat的安装过程，这里不再赘述。</p>
-<p>##安装guacamole服务器</p>
-<p>###1.安装依赖包</p>
-<p>为了保证我们的server正常安装，我们需要先安装以下依赖：</p>
+<h2 id="安装环境说明"><a href="#安装环境说明" class="headerlink" title="安装环境说明"></a>安装环境说明</h2><p>操作系统：CentOS6.3 x86-64<br>JDK：JDK6<br>Tomcat：Tomcat7<br>Guacamole服务器：guacamole-server-0.9.9.tar.gz<br>Guacamole客户端：guacamole-0.9.9.war</p>
+<h2 id="安装JDK和Tomcat"><a href="#安装JDK和Tomcat" class="headerlink" title="安装JDK和Tomcat"></a>安装JDK和Tomcat</h2><p>JDK和Tomcat的安装过程，这里不再赘述。</p>
+<h2 id="安装guacamole服务器"><a href="#安装guacamole服务器" class="headerlink" title="安装guacamole服务器"></a>安装guacamole服务器</h2><h3 id="1-安装依赖包"><a href="#1-安装依赖包" class="headerlink" title="1.安装依赖包"></a>1.安装依赖包</h3><p>为了保证我们的server正常安装，我们需要先安装以下依赖：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"># 安装Cairo</span><br><span class="line">yum install -y cairo cairo-devel</span><br><span class="line"></span><br><span class="line"># 安装libpng</span><br><span class="line">yum install -y libpng libpng-devel</span><br><span class="line"></span><br><span class="line"># 安装FreeRDP</span><br><span class="line">yum install -y freerdp freerdp-devel</span><br><span class="line"></span><br><span class="line"># 安装Pango</span><br><span class="line">yum install -y pango pango-devel</span><br><span class="line"></span><br><span class="line"># 安装libssh2</span><br><span class="line">yum install -y libssh2 libssh2-devel</span><br><span class="line"></span><br><span class="line"># 安装libtelnet</span><br><span class="line">yum install -y libtelnet libtelnet-devel</span><br><span class="line"></span><br><span class="line"># 安装libVNCServer</span><br><span class="line">yum install -y libvncserver libvncserver-devel</span><br><span class="line"></span><br><span class="line"># 安装libpulse</span><br><span class="line">yum install -y pulseaudio pulseaudio-libs pulseaudio-libs-devel</span><br><span class="line"></span><br><span class="line"># 安装libssl</span><br><span class="line">yum install -y openssl openssl-devel</span><br><span class="line"></span><br><span class="line"># 安装libvorbis</span><br><span class="line">yum install -y libvorbis libvorbis-devel</span><br><span class="line"></span><br><span class="line"># 安装OSSP UUID</span><br><span class="line">yum install -y uuid uuid-devel</span><br></pre></td></tr></table></figure>
 <p><strong>说明</strong>：如需连接VNC还需安装VNC_Server</p>
-<p>###2.编译安装guacamole_server源码包</p>
-<p>接下来编译下载好的guacamole-server-0.9.9.tar.gz源码包，执行如下命令：</p>
+<h3 id="2-编译安装guacamole-server源码包"><a href="#2-编译安装guacamole-server源码包" class="headerlink" title="2.编译安装guacamole_server源码包"></a>2.编译安装guacamole_server源码包</h3><p>接下来编译下载好的guacamole-server-0.9.9.tar.gz源码包，执行如下命令：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"># 解压源码包</span><br><span class="line">tar -xvzf guacamole-server-0.9.9.tar.gz</span><br><span class="line"></span><br><span class="line"># 进入到解压目录下</span><br><span class="line">cd guacamole-server-0.9.9/</span><br><span class="line"></span><br><span class="line"># 执行configure进行脚本配置，并将guacd的启动脚本置于/init.d目录下</span><br><span class="line">./configure --with-init-dir=/etc/init.d</span><br><span class="line"></span><br><span class="line"># 编译guacamole_server源码</span><br><span class="line">make</span><br><span class="line"></span><br><span class="line"># 安装创建完的组件</span><br><span class="line">make install</span><br><span class="line"></span><br><span class="line"># 更新已安装库的系统缓存</span><br><span class="line">ldconfig</span><br></pre></td></tr></table></figure>
 <p>###3.配置guacamole服务：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"># 修改guacd启动脚本的所属者和所属群体</span><br><span class="line">chown root.root /etc/init.d/guacd</span><br><span class="line"></span><br><span class="line"># 修改guacd启动脚本的权限</span><br><span class="line">chmod 755 /etc/init.d/guacd</span><br><span class="line"></span><br><span class="line"># 增加guacd启动脚本为系统服务 </span><br><span class="line">chkconfig --add guacd</span><br><span class="line"></span><br><span class="line"># 设置guacd在各执行等级为开启状态</span><br><span class="line">chkconfig guacd on</span><br></pre></td></tr></table></figure>
@@ -329,11 +331,10 @@
 <p>##安装Guacamole客户端</p>
 <p>###1.首先新建配置文件：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"># 创建路径</span><br><span class="line">mkdir /etc/guacamole</span><br><span class="line"></span><br><span class="line"># 创建路径</span><br><span class="line">mkdir /root/.guacamole</span><br><span class="line"></span><br><span class="line"># 创建配置文件guacamole.properties</span><br><span class="line">touch /etc/guacamole/guacamole.properties</span><br><span class="line"></span><br><span class="line"># 创建配置文件user-mapping.xml</span><br><span class="line">touch /etc/guacamole/user-mapping.xml</span><br><span class="line"></span><br><span class="line"># 创建软连接</span><br><span class="line">ln -s /etc/guacamole/guacamole.properties /root/.guacamole/</span><br></pre></td></tr></table></figure>
-<p>###2.设置配置文件内容：</p>
-<p><code>guacamole.properties</code>是Guacamole客户端的一个主要配置文件，由此我们可以设置session超时、可用语言、host端口、port端口、ssl等等，在本例中，我们仅添加如下内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 配置基本用户映射</span><br><span class="line">basic-user-mapping: /etc/guacamole/user-mapping.xml</span><br></pre></td></tr></table></figure></p>
+<h3 id="2-设置配置文件内容："><a href="#2-设置配置文件内容：" class="headerlink" title="2.设置配置文件内容："></a>2.设置配置文件内容：</h3><p><code>guacamole.properties</code>是Guacamole客户端的一个主要配置文件，由此我们可以设置session超时、可用语言、host端口、port端口、ssl等等，在本例中，我们仅添加如下内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 配置基本用户映射</span><br><span class="line">basic-user-mapping: /etc/guacamole/user-mapping.xml</span><br></pre></td></tr></table></figure></p>
 <p>接下来配置<code>user-mapping.xml</code>，该XML文件的根节点为<code>&lt;user-mapping&gt;</code>，向其中插入如下内容，每一个<code>&lt;authorize&gt;</code>节点为一个用户配置，每一个<code>&lt;connection&gt;</code>节点为一个授权链接配置：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 每名用户的配置信息和权限 --&gt;</span><br><span class="line">&lt;authorize username=&quot;USERNAME&quot; password=&quot;PASSWORD&quot;&gt;</span><br><span class="line">    &lt;protocol&gt;vnc&lt;/protocol&gt;</span><br><span class="line">    &lt;param name=&quot;hostname&quot;&gt;localhost&lt;/param&gt;</span><br><span class="line">    &lt;param name=&quot;port&quot;&gt;5900&lt;/param&gt;</span><br><span class="line">    &lt;param name=&quot;password&quot;&gt;VNCPASS&lt;/param&gt;</span><br><span class="line">&lt;/authorize&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 另一个用户，该用户采用MD5加密 --&gt;</span><br><span class="line">&lt;authorize </span><br><span class="line">        username=&quot;USERNAME2&quot;</span><br><span class="line">        password=&quot;319f4d26e3c536b5dd871bb2c52e3178&quot;</span><br><span class="line">        encoding=&quot;md5&quot;&gt;</span><br><span class="line"></span><br><span class="line">    &lt;!-- 第一个授权链接 --&gt;</span><br><span class="line">    &lt;connection name=&quot;localhost&quot;&gt;</span><br><span class="line">        &lt;protocol&gt;ssh&lt;/protocol&gt;</span><br><span class="line">        &lt;param name=&quot;hostname&quot;&gt;localhost&lt;/param&gt;</span><br><span class="line">        &lt;param name=&quot;port&quot;&gt;22&lt;/param&gt;</span><br><span class="line">        &lt;param name=&quot;password&quot;&gt;VNCPASS&lt;/param&gt;</span><br><span class="line">    &lt;/connection&gt;</span><br><span class="line"></span><br><span class="line">    &lt;!-- 第二个授权链接 --&gt;</span><br><span class="line">    &lt;connection name=&quot;otherhost&quot;&gt;</span><br><span class="line">        &lt;protocol&gt;vnc&lt;/protocol&gt;</span><br><span class="line">        &lt;param name=&quot;hostname&quot;&gt;otherhost&lt;/param&gt;</span><br><span class="line">        &lt;param name=&quot;port&quot;&gt;5900&lt;/param&gt;</span><br><span class="line">        &lt;param name=&quot;password&quot;&gt;VNCPASS&lt;/param&gt;</span><br><span class="line">    &lt;/connection&gt;</span><br><span class="line"></span><br><span class="line">&lt;/authorize&gt;</span><br></pre></td></tr></table></figure></p>
 <p>配置文件配置好之后，我们需要修改<code>/etc/profile</code>，向文件内末尾追加<code>export GUACAMOLE_HOME=/etc/guacamole</code>，保存修改后，执行<code>source /etc/profile</code>，使其生效，以保证Guacamole能够从系统环境变量中找到<code>guacamole.properties</code>的位置。</p>
-<p>##验证Guacamole服务<br>最后启动tomcat和guacd服务，服务启动完毕后，我们就可以验证我们的Guacamole服务了，在WEB浏览器中输入以下URL：<code>http://服务IP地址:8080/guacamole/</code>。然后，在登录页面中输入配置好的用户名/密码（authorize节点内的用户名/密码）即可通过WEB页面连接至远程服务。</p>
+<h2 id="验证Guacamole服务"><a href="#验证Guacamole服务" class="headerlink" title="验证Guacamole服务"></a>验证Guacamole服务</h2><p>最后启动tomcat和guacd服务，服务启动完毕后，我们就可以验证我们的Guacamole服务了，在WEB浏览器中输入以下URL：<code>http://服务IP地址:8080/guacamole/</code>。然后，在登录页面中输入配置好的用户名/密码（authorize节点内的用户名/密码）即可通过WEB页面连接至远程服务。</p>
 
       
     </div>
@@ -345,7 +346,7 @@
         <p><span>本文标题:</span><a href="/2016/05/25/CentOS6.3下安装和配置Guacamole 0.9.9/">CentOS6.3下安装和配置Guacamole 0.9.9</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">桂圆大叔</a></p>
         <p><span>发布时间:</span>2016-05-25, 15:41:02</p>
-        <p><span>最后更新:</span>2016-05-25, 15:42:42</p>
+        <p><span>最后更新:</span>2016-05-25, 15:48:05</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/05/25/CentOS6.3下安装和配置Guacamole 0.9.9/" title="CentOS6.3下安装和配置Guacamole 0.9.9">http://yoursite.com/2016/05/25/CentOS6.3下安装和配置Guacamole 0.9.9/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/05/25/CentOS6.3下安装和配置Guacamole 0.9.9/　　作者: 桂圆大叔" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -374,7 +375,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#简介"><span class="toc-number">1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#部署环境和优势"><span class="toc-number">2.</span> <span class="toc-text">部署环境和优势</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装环境说明"><span class="toc-number">3.</span> <span class="toc-text">安装环境说明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装JDK和Tomcat"><span class="toc-number">4.</span> <span class="toc-text">安装JDK和Tomcat</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装guacamole服务器"><span class="toc-number">5.</span> <span class="toc-text">安装guacamole服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-安装依赖包"><span class="toc-number">5.1.</span> <span class="toc-text">1.安装依赖包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-编译安装guacamole-server源码包"><span class="toc-number">5.2.</span> <span class="toc-text">2.编译安装guacamole_server源码包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-设置配置文件内容："><span class="toc-number">5.3.</span> <span class="toc-text">2.设置配置文件内容：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#验证Guacamole服务"><span class="toc-number">6.</span> <span class="toc-text">验证Guacamole服务</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
