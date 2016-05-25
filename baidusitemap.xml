@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    
+    
+  <url>
+    <loc>http://yoursite.com/2016/05/25/R%E8%AF%AD%E8%A8%80WEB%E7%89%88IDE%E7%9B%B8%E5%85%B3%E8%B0%83%E7%A0%94/</loc>
+    <lastmod>2016-05-25T08:18:36.327Z</lastmod>
+    <data>
+        <display>
+        <title>R语言WEB版IDE相关调研</title>
+        <pubTime>2016-05-25T08:05:02.000Z</pubTime>
+        
+        <tag>R语言,RStudio </tag>
+         
+         
+           
+             
+              <breadCrumb title="操作手顺" url="http://yoursite.com/categories/%E6%93%8D%E4%BD%9C%E6%89%8B%E9%A1%BA/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/05/25/CentOS6.3%E4%B8%8B%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AEGuacamole%200.9.9/</loc>
+    <lastmod>2016-05-25T08:17:07.600Z</lastmod>
+    <data>
+        <display>
+        <title>CentOS6.3下安装和配置Guacamole 0.9.9</title>
+        <pubTime>2016-05-25T07:41:02.000Z</pubTime>
+        
+        <tag>Guacamole </tag>
+         
+         
+           
+             
+              <breadCrumb title="操作手顺" url="http://yoursite.com/categories/%E6%93%8D%E4%BD%9C%E6%89%8B%E9%A1%BA/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+    
+    
+</urlset>
