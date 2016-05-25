@@ -272,49 +272,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><excerpt in="" index="" |="" 首页摘要=""><br>R是用于统计分析、绘图的语言和操作环境。其属于GNU系统的一个自由、免费、源代码开放的软件，它是一个用于统计计算和统计制图的优秀工具…</excerpt></p>
-<the rest="" of="" contents="" |="" 余下全文="">
-
-<h1 id="初识R语言"><a href="#初识R语言" class="headerlink" title="初识R语言"></a>初识R语言</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>R是用于统计分析、绘图的语言和操作环境。其属于GNU系统的一个自由、免费、源代码开放的软件，它是一个用于统计计算和统计制图的优秀工具，R的主要功能包括：</p>
-<blockquote>
-<ul>
-<li>数据存储和处理系统；</li>
-<li>优秀的统计制图功能；</li>
-<li>完整连贯的统计分析工具；</li>
-<li>数组运算工具（其向量、矩阵运算方面功能尤其强大）；</li>
-<li>简便而强大的编程语言：可操纵数据的输入和输出，可实现分支、循环，用户可自定义功能。</li>
-</ul>
-</blockquote>
-<p>与其说R是一种统计软件，还不如说R是一种数学计算的环境，因为R并不是仅仅提供若干统计程序、使用者只需指定数据库和若干参数便可进行一个统计分析。</p>
-<p><strong>R的思想是</strong>：它可以提供一些集成的统计工具，但更大量的是它提供各种数学计算、统计计算的函数，从而使使用者能灵活机动的进行数据分析，甚至创造出符合需要的新的统计计算方法。该语言的语法表面上类似C，但在语义上是函数设计语言的变种并且和Lisp以及APL有很强的兼容性。特别的是，它允许在“语言上计算”。这使得它可以把表达式作为函数的输入参数，而这种做法对统计模拟和绘图非常有用。</p>
-<h1 id="R语言的安装"><a href="#R语言的安装" class="headerlink" title="R语言的安装"></a>R语言的安装</h1><p>R是一个免费的自由软件，它有UNIX、LINUX、MacOS和WINDOWS版本，都是可以免费下载和使用的。在R的安装程序中只包含了8个基础模块，其他外在模块可以通过CRAN获得。</p>
-<h3 id="在windows上安装R"><a href="#在windows上安装R" class="headerlink" title="在windows上安装R"></a>在windows上安装R</h3><p>首先，浏览器进入R语言（CRAN）<a href="http://cran.r-project.org" target="_blank" rel="external">镜像站</a> ，window下载子目录先选择base,下载windows最新版本的安装包。接下来只需打开安装文件，如果你的电脑系统是32位，那么选择32bit安装，如果不清楚自己电脑的系统类型，那么你可以按默认的安装。接着你可以选择M不同的的界面风格SDI（独立窗口）或者MDI（大窗口），也可以根据自己的喜好选择帮助文档类型是纯文本还是网页文档。最后，接下来的安装按默认就好了。</p>
-<h3 id="在CentOS上编译安装R"><a href="#在CentOS上编译安装R" class="headerlink" title="在CentOS上编译安装R"></a>在CentOS上编译安装R</h3><p>首先下载R的源码包：<a href="https://cran.r-project.org/src/base/R-3/R-3.2.2.tar.gz" target="_blank" rel="external">https://cran.r-project.org/src/base/R-3/R-3.2.2.tar.gz</a></p>
-<p>然后安装相关依赖包：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># yum install gcc-gfortran            </span><br><span class="line"># yum install gcc gcc-c++              </span><br><span class="line"># yum install readline-devel          </span><br><span class="line"># yum install libXt-devel</span><br></pre></td></tr></table></figure></p>
-<p>接下来解压R源码包，并安装，操作命令如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># tar zxvf R-3.2.2.tar.gz</span><br><span class="line"># cd R-3.2.2</span><br><span class="line"># ./configure --enable-R-shlib</span><br><span class="line"># make</span><br><span class="line"># make install</span><br></pre></td></tr></table></figure></p>
-<p>安装完成后，我们来测试下，如果安装无误，执行命令<code>R</code>会进入到R的环境下，如图：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"># R</span><br><span class="line"></span><br><span class="line">进入到R的编译环境如下：</span><br><span class="line"></span><br><span class="line">R version 3.1.1 (2014-07-10) -- &quot;Sock it to Me&quot;</span><br><span class="line">Copyright (C) 2014 The R Foundation for Statistical Computing</span><br><span class="line">Platform: x86_64-unknown-linux-gnu (64-bit)</span><br><span class="line"></span><br><span class="line">R is free software and comes with ABSOLUTELY NO WARRANTY.</span><br><span class="line">You are welcome to redistribute it under certain conditions.</span><br><span class="line">Type &apos;license()&apos; or &apos;licence()&apos; for distribution details.</span><br><span class="line"></span><br><span class="line">  Natural language support but running in an English locale</span><br><span class="line"></span><br><span class="line">R is a collaborative project with many contributors.</span><br><span class="line">Type &apos;contributors()&apos; for more information and</span><br><span class="line">&apos;citation()&apos; on how to cite R or R packages in publications.</span><br><span class="line"></span><br><span class="line">Type &apos;demo()&apos; for some demos, &apos;help()&apos; for on-line help, or</span><br><span class="line">&apos;help.start()&apos; for an HTML browser interface to help.</span><br><span class="line">Type &apos;q()&apos; to quit R.</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure></p>
-<h1 id="RStudio相关"><a href="#RStudio相关" class="headerlink" title="RStudio相关"></a>RStudio相关</h1><h2 id="简介-1"><a href="#简介-1" class="headerlink" title="简介"></a>简介</h2><p>RStudio是一款使R更容易使用和更高效的IDE，其集成了一组高效的工具，包括：</p>
-<blockquote>
-<ul>
-<li>代码编辑器 – 高亮，代码自动补全，缩进及定义；</li>
-<li>调试 – 调试控制台， 断点，环境面板和异常信息追踪；</li>
-<li>可视化 – 数据展示，数据绘图以及数据操作；</li>
-</ul>
-</blockquote>
-<p>RStudio目前提供两个版本：</p>
-<blockquote>
-<ul>
-<li>桌面版（RStudio Desktop）：本地IDE服务，支持Windows、Mac、Linux；</li>
-<li>服务器版（RStudio Server）：可以在浏览器中访问连接到RStudio服务器，支持Debian / Ubuntu,RedHat / CentOS和SUSE Linux。</li>
-</ul>
-</blockquote>
-<h1 id="RStudio的安装"><a href="#RStudio的安装" class="headerlink" title="RStudio的安装"></a>RStudio的安装</h1><p>在RStudio安装之前，你必须在电脑上安装R。R安装完成之后，你可以登录<a href="http://rstudio.com" target="_blank" rel="external">RStudio的官网</a>，下载桌面版本的的RStudio或者服务器版本的RStudio，选择适合自己电脑的RStudio安装版本，下载之后，点击安装，官网上有详细的安装教程，在此简单介绍下CentOS6.5下RStudio Server的安装过程。</p>
-<p>打开终端，执行命令如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># wget https://download2.rstudio.org/rstudio-server-rhel-0.99.893-x86_64.rpm</span><br><span class="line"># sudo yum install --nogpgcheck rstudio-server-rhel-0.99.893-x86_64.rpm</span><br></pre></td></tr></table></figure></p>
-<p>RStudio默认的服务端口为<code>8787</code>，安装完成后，由于centOS自带的防火墙策略还没添加<code>8787</code>端口，所以我们还需要修改防火墙配置文件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># vi /etc/sysconfig/iptables</span><br><span class="line"></span><br><span class="line">在路由表内追加如下配置：</span><br><span class="line"></span><br><span class="line">-A INPUT -m state –state NEW -m tcp -p tcp –dport 8787-j ACCEPT</span><br></pre></td></tr></table></figure></p>
-<p>最后我们来验证我们的服务是否可用，执行命令如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># rstudio-server verify-installation</span><br></pre></td></tr></table></figure></p>
-<p>如未提示异常信息则可以正常访问，在浏览器输入<code>http://&lt;服务器IP&gt;:8787</code>直接访问，登录名和密码为操作系统用户的用户名和密码，但是不能使用root登录。</p>
-<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p>R语言官网：<a href="http://www.r-project.org/" target="_blank" rel="external">http://www.r-project.org/</a><br>RStudio官网： <a href="https://www.rstudio.com/" target="_blank" rel="external">https://www.rstudio.com/</a><br>CentOS下编译安装R和rpm安装RStudio：<a href="http://www.biiiu.com/258.html" target="_blank" rel="external">http://www.biiiu.com/258.html</a><br>RStudio服务配置：<a href="https://support.rstudio.com/hc/en-us/articles/200552316-Configuring-the-Server" target="_blank" rel="external">https://support.rstudio.com/hc/en-us/articles/200552316-Configuring-the-Server</a><br>./configure、make、make install命令解释：<a href="http://feinibuke.blog.51cto.com/1724260/367376" target="_blank" rel="external">http://feinibuke.blog.51cto.com/1724260/367376</a></p>
-</the>
+              <p><Excerpt in index | 首页摘要><br>R是用于统计分析、绘图的语言和操作环境。其属于GNU系统的一个自由、免费、源代码开放的软件，它是一个用于统计计算和统计制图的优秀工具…<br>
+          
       
     </div>
     
@@ -331,6 +290,10 @@
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/R语言-RStudio/">R语言,RStudio</a></li></ul>
     </div>
 
+      
+        <p class="article-more-link">
+          <a href="/2016/05/25/R语言WEB版IDE相关调研/#more">阅读全文 >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
