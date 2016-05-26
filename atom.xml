@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-05-25T09:57:27.733Z</updated>
+  <updated>2016-05-26T01:57:24.753Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2016/05/25/R%E8%AF%AD%E8%A8%80WEB%E7%89%88IDE%E7%9B%B8%E5%85%B3%E8%B0%83%E7%A0%94/"/>
     <id>http://yoursite.com/2016/05/25/R语言WEB版IDE相关调研/</id>
     <published>2016-05-25T08:05:02.000Z</published>
-    <updated>2016-05-25T09:57:27.733Z</updated>
+    <updated>2016-05-26T01:57:24.753Z</updated>
     
     <content type="html">&lt;p&gt;&lt;excerpt in=&quot;&quot; index=&quot;&quot; |=&quot;&quot; 首页摘要=&quot;&quot;&gt;&lt;br&gt;R是用于统计分析、绘图的语言和操作环境。其属于GNU系统的一个自由、免费、源代码开放的软件，它是一个用于统计计算和统计制图的优秀工具…&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/excerpt&gt;&lt;/p&gt;
 &lt;the rest=&quot;&quot; of=&quot;&quot; contents=&quot;&quot; |=&quot;&quot; 余下全文=&quot;&quot;&gt;
@@ -75,7 +75,7 @@
       <category term="操作手顺" scheme="http://yoursite.com/categories/%E6%93%8D%E4%BD%9C%E6%89%8B%E9%A1%BA/"/>
     
     
-      <category term="R语言,RStudio" scheme="http://yoursite.com/tags/R%E8%AF%AD%E8%A8%80-RStudio/"/>
+      <category term="R语言  RStudio" scheme="http://yoursite.com/tags/R%E8%AF%AD%E8%A8%80-RStudio/"/>
     
   </entry>
   
