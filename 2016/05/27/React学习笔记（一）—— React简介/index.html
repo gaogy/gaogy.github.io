@@ -17,13 +17,13 @@
 <meta property="og:url" content="http://yoursite.com/2016/05/27/React学习笔记（一）—— React简介/index.html">
 <meta property="og:site_name" content="桂圆的博客">
 <meta property="og:description" content="React 是一个 Facebook 和 Instagram 用来创建用户界面的 JavaScript 库…">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2165169-e1ba42ed1433725b.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://img2.imgtn.bdimg.com/it/u=1208640716,3059113308&fm=21&gp=0.jpg">
-<meta property="og:updated_time" content="2016-05-27T09:48:49.621Z">
+<meta property="og:image" content="http://thumbnail0.baidupcs.com/thumbnail/574887399b1f5560d9f8655bdb28f58a?fid=3310013903-250528-589951815227407&time=1464343200&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-SsyzN76%2Bj5wVTitsB%2BT%2B5XMaeJY%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=3427142354678043421&dp-callid=0&size=c710_u400&quality=100">
+<meta property="og:image" content="http://thumbnail0.baidupcs.com/thumbnail/2dd368a3db3a213e38d90ede827a2576?fid=3310013903-250528-752187956493672&time=1464343200&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-3zQuIwpTXIq8I9Khi%2FxDCCvPBF8%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=3427152330557949568&dp-callid=0&size=c710_u400&quality=100">
+<meta property="og:updated_time" content="2016-05-27T10:25:50.495Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="React学习笔记（一）—— React简介">
 <meta name="twitter:description" content="React 是一个 Facebook 和 Instagram 用来创建用户界面的 JavaScript 库…">
-<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/2165169-e1ba42ed1433725b.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:image" content="http://thumbnail0.baidupcs.com/thumbnail/574887399b1f5560d9f8655bdb28f58a?fid=3310013903-250528-589951815227407&time=1464343200&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-SsyzN76%2Bj5wVTitsB%2BT%2B5XMaeJY%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=3427142354678043421&dp-callid=0&size=c710_u400&quality=100">
   
     <link rel="alternative" href="/atom.xml" title="桂圆的博客" type="application/atom+xml">
   
@@ -290,10 +290,10 @@
 <h2 id="web开发早期"><a href="#web开发早期" class="headerlink" title="web开发早期"></a>web开发早期</h2><p>在web开发的早期时代（据史书记载，那段不堪回首的岁月被称之为<code>web1.0时代</code> (╯▽╰)），开发过程十分的简单明快，构建web应用的大致过程就是，<strong>浏览器向服务器端发送请求，然后由服务器端响应请求并返回页面内容</strong>，基本可以概括为：朕（服务器）给你（浏览器）的是你的，朕不给你的你不能抢。</p>
 <p>这种模式下开发者无需关心浏览器端发生了什么，通常5个人以内，不分前后端就可以close掉一个小项目，当然是在业务不太复杂的情况下。然而业务往往是会变复杂滴（个人感觉这和熵增原理存在着某些必然联系(￢_￢)），当业务变得复杂时，很多开心的事就会发僧了，Because往往业务一复杂，人就得多，人一多，花样就多，花样一多，维护的成本就会变大…</p>
 <p>还有一个就是用户体验问题，在这种模式下很难打造出极佳的用户体验，因为无论用户想做点什么，<strong>都需要向服务器发请求，并等待服务器端的响应，这会导致用户失去在页面上所积累的状态</strong>。毕竟我们是服务行业，服务行业的主旨是什么？——客户就是上帝。上帝要是不开心了，你还想不想吃小馒头了。因此为了小馒头，，，Σ( ° △ °|||)︴，，，啊呸，不对，是为了更好的用户体验！！人们开始开发类库。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2165169-e1ba42ed1433725b.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="web1.0"></p>
+<p><img src="http://thumbnail0.baidupcs.com/thumbnail/574887399b1f5560d9f8655bdb28f58a?fid=3310013903-250528-589951815227407&amp;time=1464343200&amp;rt=sh&amp;sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-SsyzN76%2Bj5wVTitsB%2BT%2B5XMaeJY%3D&amp;expires=8h&amp;chkv=0&amp;chkbd=0&amp;chkpc=&amp;dp-logid=3427142354678043421&amp;dp-callid=0&amp;size=c710_u400&amp;quality=100" alt="web1.0"></p>
 <h2 id="类库"><a href="#类库" class="headerlink" title="类库"></a>类库</h2><p>为了更好的用户体验，人们开始开发类库，使用JavaScript在浏览器端渲染应用。这些类库使用的方法也不尽相同，简单的使用带参数的模板，复杂的就完全掌控整个应用。随着开发者在越来越大的项目中使用这些类库，应用也变得越来越难以把握，因为这些应用是一系列相互作用的结果。</p>
 <h2 id="React简介"><a href="#React简介" class="headerlink" title="React简介"></a>React简介</h2><p>React 是一个 Facebook 和 Instagram 用来<strong>创建用户界面的 JavaScript 库</strong>。发源自FaceBook的PHP框架XHP的一个分支，XHP作为一个PHP框架，其主旨在于每次有请求进来时渲染整个页面。React的产生是为了把这种重新渲染整个页面的PHP式工作流带到客户端应用中来。</p>
-<p><img src="http://img2.imgtn.bdimg.com/it/u=1208640716,3059113308&amp;fm=21&amp;gp=0.jpg" alt="React_Logo"></p>
+<p><img src="http://thumbnail0.baidupcs.com/thumbnail/2dd368a3db3a213e38d90ede827a2576?fid=3310013903-250528-752187956493672&amp;time=1464343200&amp;rt=sh&amp;sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-3zQuIwpTXIq8I9Khi%2FxDCCvPBF8%3D&amp;expires=8h&amp;chkv=0&amp;chkbd=0&amp;chkpc=&amp;dp-logid=3427152330557949568&amp;dp-callid=0&amp;size=c710_u400&amp;quality=100" alt="React_Logo"></p>
 <p>React本质上是一个“状态机”，可以帮助开发者管理复杂的随着时间而变化的状态。它以一种精简的模型实现了这一点。React只关心两件事：</p>
 <blockquote>
 <ul>
@@ -316,7 +316,7 @@
         <p><span>本文标题:</span><a href="/2016/05/27/React学习笔记（一）—— React简介/">React学习笔记（一）—— React简介</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">桂圆</a></p>
         <p><span>发布时间:</span>2016-05-27, 16:05:02</p>
-        <p><span>最后更新:</span>2016-05-27, 17:48:49</p>
+        <p><span>最后更新:</span>2016-05-27, 18:25:50</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/05/27/React学习笔记（一）—— React简介/" title="React学习笔记（一）—— React简介">http://yoursite.com/2016/05/27/React学习笔记（一）—— React简介/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/05/27/React学习笔记（一）—— React简介/　　作者: 桂圆" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
