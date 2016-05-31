@@ -1,69 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="sitemap.xsl"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>http://yoursite.com</loc>
+        <loc>http://gaogy.github.io</loc>
         <changefreq>daily</changefreq>
         <priority>1</priority>
     </url>
     
     <url>
-        <loc>http://yoursite.com//404.html</loc>
+        <loc>http://gaogy.github.io//404.html</loc>
         <lastmod>2016-05-26T01:53:37.211Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>http://yoursite.com/tags/index-1.html</loc>
+        <loc>http://gaogy.github.io/tags/index-1.html</loc>
         <lastmod>2016-05-26T01:49:12.989Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>http://yoursite.com/about/index-4.html</loc>
+        <loc>http://gaogy.github.io/about/index-4.html</loc>
         <lastmod>2016-05-26T01:49:06.198Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>http://yoursite.com/tags/index.html</loc>
+        <loc>http://gaogy.github.io/tags/index.html</loc>
         <lastmod>2016-05-26T01:48:53.363Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>http://yoursite.com/about/index-3.html</loc>
+        <loc>http://gaogy.github.io/about/index-3.html</loc>
         <lastmod>2016-05-26T01:48:12.424Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>http://yoursite.com/tag/index.html</loc>
+        <loc>http://gaogy.github.io/tag/index.html</loc>
         <lastmod>2016-05-25T07:27:48.282Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>http://yoursite.com/about/index-2.html</loc>
+        <loc>http://gaogy.github.io/about/index-2.html</loc>
         <lastmod>2016-05-25T07:24:46.523Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>http://yoursite.com/about/index-1.html</loc>
+        <loc>http://gaogy.github.io/about/index-1.html</loc>
         <lastmod>2016-05-25T07:24:12.463Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>http://yoursite.com/about/index.html</loc>
+        <loc>http://gaogy.github.io/about/index.html</loc>
         <lastmod>2016-05-25T07:23:45.123Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>

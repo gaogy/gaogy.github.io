@@ -4,9 +4,9 @@
   <subtitle>我有故事，你有网吗？</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="http://gaogy.github.io/"/>
   <updated>2016-05-27T10:25:50.495Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>http://gaogy.github.io/</id>
   
   <author>
     <name>桂圆</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>React学习笔记（一）—— React简介</title>
-    <link href="http://yoursite.com/2016/05/27/React%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89%E2%80%94%E2%80%94%20React%E7%AE%80%E4%BB%8B/"/>
-    <id>http://yoursite.com/2016/05/27/React学习笔记（一）—— React简介/</id>
+    <link href="http://gaogy.github.io/2016/05/27/React%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89%E2%80%94%E2%80%94%20React%E7%AE%80%E4%BB%8B/"/>
+    <id>http://gaogy.github.io/2016/05/27/React学习笔记（一）—— React简介/</id>
     <published>2016-05-27T08:05:02.000Z</published>
     <updated>2016-05-27T10:25:50.495Z</updated>
     
@@ -51,21 +51,21 @@
     
     </summary>
     
-      <category term="读书笔记" scheme="http://yoursite.com/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+      <category term="读书笔记" scheme="http://gaogy.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="React" scheme="http://yoursite.com/tags/React/"/>
+      <category term="React" scheme="http://gaogy.github.io/tags/React/"/>
     
-      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="http://gaogy.github.io/tags/JavaScript/"/>
     
-      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="http://gaogy.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
   <entry>
     <title>R语言WEB版IDE相关调研</title>
-    <link href="http://yoursite.com/2016/05/25/R%E8%AF%AD%E8%A8%80WEB%E7%89%88IDE%E7%9B%B8%E5%85%B3%E8%B0%83%E7%A0%94/"/>
-    <id>http://yoursite.com/2016/05/25/R语言WEB版IDE相关调研/</id>
+    <link href="http://gaogy.github.io/2016/05/25/R%E8%AF%AD%E8%A8%80WEB%E7%89%88IDE%E7%9B%B8%E5%85%B3%E8%B0%83%E7%A0%94/"/>
+    <id>http://gaogy.github.io/2016/05/25/R语言WEB版IDE相关调研/</id>
     <published>2016-05-25T08:05:02.000Z</published>
     <updated>2016-05-26T02:07:09.641Z</updated>
     
@@ -119,19 +119,19 @@
     
     </summary>
     
-      <category term="操作手顺" scheme="http://yoursite.com/categories/%E6%93%8D%E4%BD%9C%E6%89%8B%E9%A1%BA/"/>
+      <category term="操作手顺" scheme="http://gaogy.github.io/categories/%E6%93%8D%E4%BD%9C%E6%89%8B%E9%A1%BA/"/>
     
     
-      <category term="R语言" scheme="http://yoursite.com/tags/R%E8%AF%AD%E8%A8%80/"/>
+      <category term="R语言" scheme="http://gaogy.github.io/tags/R%E8%AF%AD%E8%A8%80/"/>
     
-      <category term="RStudio" scheme="http://yoursite.com/tags/RStudio/"/>
+      <category term="RStudio" scheme="http://gaogy.github.io/tags/RStudio/"/>
     
   </entry>
   
   <entry>
     <title>CentOS6.3下安装和配置Guacamole 0.9.9</title>
-    <link href="http://yoursite.com/2016/05/25/CentOS6.3%E4%B8%8B%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AEGuacamole%200.9.9/"/>
-    <id>http://yoursite.com/2016/05/25/CentOS6.3下安装和配置Guacamole 0.9.9/</id>
+    <link href="http://gaogy.github.io/2016/05/25/CentOS6.3%E4%B8%8B%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AEGuacamole%200.9.9/"/>
+    <id>http://gaogy.github.io/2016/05/25/CentOS6.3下安装和配置Guacamole 0.9.9/</id>
     <published>2016-05-25T07:41:02.000Z</published>
     <updated>2016-05-25T08:17:07.600Z</updated>
     
@@ -191,10 +191,10 @@
     
     </summary>
     
-      <category term="操作手顺" scheme="http://yoursite.com/categories/%E6%93%8D%E4%BD%9C%E6%89%8B%E9%A1%BA/"/>
+      <category term="操作手顺" scheme="http://gaogy.github.io/categories/%E6%93%8D%E4%BD%9C%E6%89%8B%E9%A1%BA/"/>
     
     
-      <category term="Guacamole" scheme="http://yoursite.com/tags/Guacamole/"/>
+      <category term="Guacamole" scheme="http://gaogy.github.io/tags/Guacamole/"/>
     
   </entry>
   
