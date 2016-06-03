@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+  <meta charset="utf-8">
+  
+  <title>React学习笔记（二）—— 理解JSX | 桂圆的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="JSX（JavaScriptXML）提供了一种在JavaScript中编写声明式的XML的方法，使用JSX可以提高组件的可读性，React允许做简单的JSX语法转化。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="React学习笔记（二）—— 理解JSX">
+<meta property="og:url" content="http://gaogy.github.io/2016/06/03/React学习笔记（二）—— 理解JSX/index.html">
+<meta property="og:site_name" content="桂圆的博客">
+<meta property="og:description" content="JSX（JavaScriptXML）提供了一种在JavaScript中编写声明式的XML的方法，使用JSX可以提高组件的可读性，React允许做简单的JSX语法转化。">
+<meta property="og:updated_time" content="2016-06-03T06:27:18.807Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="React学习笔记（二）—— 理解JSX">
+<meta name="twitter:description" content="JSX（JavaScriptXML）提供了一种在JavaScript中编写声明式的XML的方法，使用JSX可以提高组件的可读性，React允许做简单的JSX语法转化。">
+  
+    <link rel="alternative" href="/atom.xml" title="桂圆的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+      <link href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css" rel="stylesheet">
+  
+  
+  
+      <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+      <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+  
+  <script src="//cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.9/clipboard.min.js"></script>
+  <script>
+      var yiliaConfig = {
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false,
+          fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+          scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.0.9/scrollreveal.min.js"
+      }
+  </script>
+
+  
+      <script>
+          yiliaConfig.rootUrl = "/";
+      </script>
+  
+
+  
+  
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/avatar.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">桂圆</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">我有故事，你有网吗？</p>
+        
+                
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:guiyuan1992@163.com" title="Email"></a>
+                            
+                                <a class="fa 新浪微博" target="_blank" href="http://weibo.com/u/1893620443" title="新浪微博"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="https://github.com/gaogy/gaogy.github.io" title="GitHub"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Guacamole/">Guacamole</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RStudio/">RStudio</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/">React</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/R语言/">R语言</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端/">前端</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">专注于前端</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">桂圆</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/avatar.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">桂圆</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">我有故事，你有网吗？</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:guiyuan1992@163.com" title="Email"></a>
+                            
+                                <a class="fa 新浪微博" target="_blank" href="http://weibo.com/u/1893620443" title="新浪微博"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="https://github.com/gaogy/gaogy.github.io" title="GitHub"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+</nav>
+      <div class="body-wrap"><article id="post-React学习笔记（二）—— 理解JSX" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/06/03/React学习笔记（二）—— 理解JSX/" class="article-date">
+      <time datetime="2016-06-03T01:05:02.000Z" itemprop="datePublished">2016-06-03</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      React学习笔记（二）—— 理解JSX
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/读书笔记/">读书笔记</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/React/">React</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><excerpt in="" index="" |="" 首页摘要=""><br>JSX（JavaScriptXML）提供了一种在JavaScript中编写声明式的XML的方法，使用JSX可以提高组件的可读性，React允许做简单的JSX语法转化。<br><a id="more"></a></excerpt></p>
+<the rest="" of="" contents="" |="" 余下全文="">
+
+<p>##简介<br>JSX像是在JavaScript代码里直接写XML的语法，每一个XML标签都会被JSX转换工具转换成纯JavaScript代码，React 官方推荐使用JSX，这个看个人习惯， 如果你喜欢纯JavaScript代码也是可以的，只是使用JSX会给我们带来如下好处：</p>
+<blockquote>
+<ul>
+<li>是原生的JavaScript；</li>
+<li>程序结构更容易被直观化；</li>
+<li>提供更加语义化且易懂的标签；</li>
+<li>抽象了React Element的创建过程；</li>
+<li>允许使用熟悉的语法来定义HTML元素树；</li>
+<li>可以随时掌控HTML标签以及生成这些标签的代码；</li>
+</ul>
+</blockquote>
+<p>##定义第一个组件<br>简单的理解组件就是对数据和方法的简单封装，目的就是模块化功能。在React当中<strong>组件是用来分离关注点的，而不是被当做模板或处理显示逻辑的</strong>，在使用React开发应用过程中，往往HTML标签以及生成这些标签的代码之间存在着内在的紧密联系，其实这一坨代码就可以理解为是一个组件。</p>
+<p>接下来看一个简单的DEMO，定义我们的第一个组件，按照以往的游戏规则，我们就给他起一个文雅又响亮的名字——“HelloWorld”（React的安装包可以到<a href="!https://facebook.github.io/react/downloads.html">官网</a>去下载）：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt; </span><br><span class="line">    &lt;head&gt; </span><br><span class="line">        &lt;title&gt;Hello React&lt;/title&gt; </span><br><span class="line">        &lt;!--React核心库--&gt;</span><br><span class="line">        &lt;script src=&quot;build/react.js&quot;&gt;&lt;/script&gt; </span><br><span class="line">        &lt;!--react-dom.js提供与DOM相关功能--&gt;</span><br><span class="line">        &lt;script src=&quot;build/react-dom.js&quot;&gt;&lt;/script&gt; </span><br><span class="line">        &lt;!--browser.js将 JSX 语法转为 JavaScript 语法--&gt;</span><br><span class="line">        &lt;script src=&quot;build/browser.min.js&quot;&gt;/script&gt;</span><br><span class="line">    &lt;/head&gt; </span><br><span class="line">    &lt;body&gt; </span><br><span class="line">        &lt;HelloWorld&gt;Hello World!&lt;/HelloWorld&gt;</span><br><span class="line">        &lt;!--为了把 JSX 转成标准的 JavaScript，我们用 `&lt;script type=&quot;text/babel&quot;&gt;` 标签，然后通过Babel转换成在浏览器中真正执行的内容--&gt;</span><br><span class="line">        &lt;script type=&quot;text/babel&quot;&gt; </span><br><span class="line">           // 定义组件HelloWorld</span><br><span class="line">           var HelloWorld = React.createClass(&#123;</span><br><span class="line">                render : function()&#123;</span><br><span class="line">                    return (</span><br><span class="line">                        &lt;div&gt;</span><br><span class="line">                            &lt;h1&gt;this.props.children&lt;/h1&gt;</span><br><span class="line">                        &lt;/div&gt;</span><br><span class="line">                    );</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;)</span><br><span class="line">        &lt;/script&gt; </span><br><span class="line">    &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
+<p><strong>关于上例中的几点说明</strong>：</p>
+<blockquote>
+<ul>
+<li>React中组件名必须以大写字母开头；</li>
+<li>React中的组件只能包含一个顶层标签，否则会报错；</li>
+<li>JSX将两个花括号之间的内容<code>{...}</code>渲染为动态值，花括号指明了一个JavaScript上下文环境，它会将其中内容进行求值，然后渲染为标签中的若干节点；</li>
+<li><code>this.props.children</code>是组件的特殊属性，保存了开始标签与结束标签之间的所有子节点，上例中this.props.children = [“Hello World!”]；</li>
+</ul>
+</blockquote>
+<p>上述代码如果不使用JSX语法，写法如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">// 定义组件HelloWorld</span><br><span class="line">var HelloWorld = React.createClass(&#123;displayName:&quot;HelloWorld &quot;,</span><br><span class="line">    render : function()&#123;</span><br><span class="line">        return (</span><br><span class="line">             React.createElement(&quot;div&quot;,null);</span><br><span class="line">             React.createElement(&quot;h2&quot;,null,this.props.children);</span><br><span class="line">           );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br><span class="line">...</span><br></pre></td></tr></table></figure></p>
+<p>不管使不使用JSX，HelloWorld组件最终的页面渲染结果都是一样的，如下所示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">    &lt;h1&gt;Hello World!&lt;/h1&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
+<p>##JSX与HTML有何不同<br>“这个规范（JSX）并不尝试去遵循任何XML或HTML规范。JSX是作为一种ECMAScript特性来设计的，至于大家觉得JSX像XML这一事实，那仅仅是因为大家比较熟悉XML。”——以上内容摘自<a href="!http://facebook.github.io/jsx/">http://facebook.github.io/jsx/</a></p>
+<p>由此我们可以看出JSX仅仅是像HTML而已，接下来看下他们之间的关键区别。</p>
+<p>###属性<br>在HTML中我们往往通过内联的方式设置标签的属性，JSX在支持这种方式的基础上，还支持动态的设置标签的属性，具体实现形式如同我们上个DEMO中的<code>{...}</code>，我们可以将属性值定义为JS变量或者是函数。如下所示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--在HTML中标签属性示例--&gt;</span><br><span class="line">&lt;div id=&quot;demo&quot; class=&quot;myStyle&quot;&gt;&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;!--在JSX中标签属性示例--&gt;</span><br><span class="line">var demoId = this.props.id;</span><br><span class="line">var demoClass = &quot;myStyle&quot;;</span><br><span class="line">function getName()&#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line">&lt;div id=&#123;demoId&#125; name=&#123;this.getName()&#125; className=&#123;demoClass&#125;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
+<p>在React渲染组件的过程中，我们上面定义的变量和函数会被求值，最终生成的DOM结构会反映出这个新的状态。</p>
+<p>###非DOM属性</p>
+<p>下列属性只在JSX中存在：</p>
+<blockquote>
+<ul>
+<li>key：可选的唯一标示符，用来唯一的标识一个组件；</li>
+<li>ref ：允许父组件在render之外保持对子组件的一个引用；</li>
+<li>dangerouslySetInnerHtml：提供插入纯 HTML 字符串的功能，主要为了能和生成 DOM 字符串的库整合；</li>
+</ul>
+</blockquote>
+<p>接下来详细看一下这几个特殊属性的作用。</p>
+<p><strong>键（key）</strong><br>在程序运行过程中，由于用户与应用间的交互等原因，一个组件在组件树中的位置很有可能发生改变，最常见的例子就是某列表记录的增、删操作。当然这种情形下组件可能并不需要被销毁并重新创建。</p>
+<p>通过给组件设置一个唯一的标识，且保证它在一个渲染周期中保持一致，这样React就能智能的决定该重用哪一个组件，或者销毁并重新创建一个组件，避免不必要的重新渲染，得到性能的提升。</p>
+<p><strong>引用（ref）</strong><br>在JSX中可以通过在属性中设置期望的引用名来定义一个引用。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">var App = React.createClass(&#123; </span><br><span class="line">    getInitialState: function() &#123; </span><br><span class="line">        return &#123;userInput: &apos;&apos;&#125;; </span><br><span class="line">    &#125;, </span><br><span class="line">    handleChange: function(e) &#123; </span><br><span class="line">        this.setState(&#123;userInput: e.target.value&#125;); </span><br><span class="line">    &#125;, </span><br><span class="line">    clearAndFocusInput: function() &#123; </span><br><span class="line">        // 清空输入框</span><br><span class="line">        this.setState(&#123;userInput: &apos;&apos;&#125;, </span><br><span class="line">        function() &#123; </span><br><span class="line">            // 这段代码会在组件重新渲染后执行，使输入框重获焦点</span><br><span class="line">            this.refs.theInput.getDOMNode().focus(); </span><br><span class="line">        &#125;); </span><br><span class="line">    &#125;, </span><br><span class="line">    render: function() &#123; </span><br><span class="line">    return ( </span><br><span class="line">        &lt;div&gt; </span><br><span class="line">           &lt;div onClick=&#123;this.clearAndFocusInput&#125;&gt; </span><br><span class="line">               点我！点我！！点我！！！</span><br><span class="line">          &lt;/div&gt; </span><br><span class="line">          &lt;input ref=&quot;theInput&quot; value=&#123;this.state.userInput&#125; onChange=&#123;this.handleChange&#125; /&gt; </span><br><span class="line">        &lt;/div&gt; </span><br><span class="line">        ); </span><br><span class="line">     &#125; </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>然后我们就可以在组件中的任何地方使用这个引用了。通过引用获取到的这个对象叫做<strong>支持实例</strong>。他并不是一个真的DOM，而是React在需要时创建的一个描述对象。你可以通过<code>this.refs.theInput.getDomNode()</code>来访问真实的DOM节点。</p>
+<p><strong>设置原始的HTML</strong><br>dangerouslySetInnerHTML—— 顾名思义，从属性名当中就能看出来，以此来警告它的值（ 一个对象而不是字符串 ）应该被用来表明净化后的数据。在彻底的理解安全问题后果并正确地净化数据之后，生成只包含唯一 key <code>__html</code> 的对象，并且对象的值是净化后的数据，示例如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function createMarkup() &#123; </span><br><span class="line">     return &#123;__html: &apos;First · Second&apos;&#125;;</span><br><span class="line"> &#125;;</span><br><span class="line">&lt;div dangerouslySetInnerHTML=&#123;createMarkup()&#125; /&gt;</span><br></pre></td></tr></table></figure></p>
+<p>这么做的意义在于，当你不是有意地使用 <code>&lt;div dangerouslySetInnerHTML={getUsername()} /&gt;</code>时候，它并不会被渲染，因为 <code>getUsername()</code> 返回的格式是字符串而不是一个<code>{__html: &#39;&#39;}</code> 对象。<code>{__html:&#39;&#39;}</code> 背后的目的是表明它会被当成 <code>type/taint</code> 类型处理。这种包裹对象，可以通过方法调用返回净化后的数据，随后这种标记过的数据可以被传递给<code>dangerouslySetInnerHTML</code>。</p>
+<p>这个功能主要被用来与DOM字符串操作类库一起使用，所以提供的HTML必须要格式清晰（例如：传递XML校验 ）</p>
+<p>###注释<br>由于JSX本质上就是JavaScript，因此也支持JavaScript的注释方式，在JSX中可以用以下两种方式添加注释：</p>
+<blockquote>
+<ul>
+<li>当做一个元素的子节点；</li>
+<li>内联在元素的属性中；</li>
+</ul>
+</blockquote>
+<p>示例如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">// 作为一个元素的子节点</span><br><span class="line">&lt;div&gt;</span><br><span class="line">&#123;/*多行注释*/&#125;</span><br><span class="line">&lt;h1&gt;This is a h1 tag.&lt;/h1&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">// 内联在元素的属性中</span><br><span class="line">&lt;div&gt;</span><br><span class="line">&lt;h1</span><br><span class="line">/*</span><br><span class="line"> * 多行注释</span><br><span class="line"> */ </span><br><span class="line">&gt; 多行注释  &lt;/h1&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;div&gt;</span><br><span class="line">&lt;h1</span><br><span class="line">//单行注释 </span><br><span class="line">&gt;单行注释&lt;/h1&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
+<p>###特殊属性<br>由于JSX会转化为JavaScript函数，所以有些关键词我们不可以使用，比如<code>for</code>和<code>class</code>。</p>
+<p>这两个属性分别可以用<code>htmlFor</code>和<code>className</code>替换，参考如下示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;label htmlFor=&quot;name&quot; ...&gt;</span><br><span class="line">&lt;input calssName=&#123;classes&#125; ...&gt;</span><br></pre></td></tr></table></figure></p>
+<p>###样式<br>React把所有的内联样式都规范化为驼峰形式，同样类似于JavaScript中DOM的style属性，要给组件添加自定义属性，如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var styles = &#123;</span><br><span class="line">    width:100px;</span><br><span class="line">    height:100px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">React.renderComponent(&#123;&lt;div style=&#123;styles&#125;&gt;...&lt;/div&gt;,node&#125;)</span><br></pre></td></tr></table></figure></p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p>【1】《React引领未来的用户界面开发框架》<br>【2】 <a href="!http://reactjs.cn/react/index.html">React中文官网</a></p>
+</the>
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2016/06/03/React学习笔记（二）—— 理解JSX/">React学习笔记（二）—— 理解JSX</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">桂圆</a></p>
+        <p><span>发布时间:</span>2016-06-03, 09:05:02</p>
+        <p><span>最后更新:</span>2016-06-03, 14:27:18</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2016/06/03/React学习笔记（二）—— 理解JSX/" title="React学习笔记（二）—— 理解JSX">http://gaogy.github.io/2016/06/03/React学习笔记（二）—— 理解JSX/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://gaogy.github.io/2016/06/03/React学习笔记（二）—— 理解JSX/　　作者: 桂圆" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2016/05/27/React学习笔记（一）—— React简介/">
+                    React学习笔记（一）—— React简介
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#参考"><span class="toc-number">1.</span> <span class="toc-text">参考</span></a></li></ol>
+</div>
+<style>
+    .left-col .switch-btn {
+        display: none;
+    }
+    .left-col .switch-area {
+        display: none;
+    }
+</style>
+
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+            $(".switch-btn, .switch-area").fadeOut(300);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+            $(".switch-btn, .switch-area").fadeIn(500);
+        }
+    })
+
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+        $(".switch-btn, .switch-area").show();
+    }
+</script>
+
+
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"React学习笔记（二）—— 理解JSX　| 桂圆的博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+      <div class="duoshuo" id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="2016/06/03/React学习笔记（二）—— 理解JSX/" data-title="React学习笔记（二）—— 理解JSX" data-url="http://gaogy.github.io/2016/06/03/React学习笔记（二）—— 理解JSX/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"null"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = 'http://gaogy.github.io/js/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+</div>
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2016/05/27/React学习笔记（一）—— React简介/" title="下一篇: React学习笔记（一）—— React简介">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/06/03/React学习笔记（二）—— 理解JSX/">React学习笔记（二）—— 理解JSX</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/27/React学习笔记（一）—— React简介/">React学习笔记（一）—— React简介</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/25/R语言WEB版IDE相关调研/">R语言WEB版IDE相关调研</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/25/CentOS6.3下安装和配置Guacamole 0.9.9/">CentOS6.3下安装和配置Guacamole 0.9.9</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2016 桂圆
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.0">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >本站到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.1.22/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 1;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>
