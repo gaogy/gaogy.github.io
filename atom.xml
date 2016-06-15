@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>桂圆的博客</title>
-  <subtitle>我有故事，你有网吗？</subtitle>
+  <subtitle>因上努力，果上随缘</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gaogy.github.io/"/>
-  <updated>2016-06-15T03:38:20.462Z</updated>
+  <updated>2016-06-15T03:39:43.939Z</updated>
   <id>http://gaogy.github.io/</id>
   
   <author>
@@ -20,9 +20,9 @@
     <link href="http://gaogy.github.io/2016/06/15/%E4%BD%BF%E7%94%A8IcoMoon%E7%94%9F%E6%88%90%E5%9B%BE%E6%A0%87%E5%AD%97%E4%BD%93/"/>
     <id>http://gaogy.github.io/2016/06/15/使用IcoMoon生成图标字体/</id>
     <published>2016-06-15T03:05:02.000Z</published>
-    <updated>2016-06-15T03:38:20.462Z</updated>
+    <updated>2016-06-15T03:39:43.939Z</updated>
     
-    <content type="html">&lt;p&gt;&lt;excerpt in=&quot;&quot; index=&quot;&quot; |=&quot;&quot; 首页摘要=&quot;&quot;&gt;&lt;br&gt;IcoMoon是一个在线的图标字体生成器。其允许我们通过个性化设置生成ICON字体，我们可以上传本地ICON资源也可以使用IcoMoon给我们提供的丰富素材，最终生成的ICON字体有多种格式供我们选择（EOT,SVG,WOFF,TTF）。总而言之，有了这个免费资源，我们就可以个性&lt;br&gt;化的生成ICON字体，然后应用到我们的WEB页面中了。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/excerpt&gt;&lt;/p&gt;
+    <content type="html">&lt;p&gt;&lt;excerpt in=&quot;&quot; index=&quot;&quot; |=&quot;&quot; 首页摘要=&quot;&quot;&gt;&lt;br&gt;IcoMoon是一个在线的图标字体生成器。其允许我们通过个性化设置生成ICON字体，我们可以上传本地ICON资源也可以使用IcoMoon给我们提供的丰富素材，最终生成的ICON字体有多种格式供我们选择（EOT,SVG,WOFF,TTF）。总而言之，有了这个免费资源，我们就可以个性化的生成ICON字体，然后应用到我们的WEB页面中了。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/excerpt&gt;&lt;/p&gt;
 &lt;the rest=&quot;&quot; of=&quot;&quot; contents=&quot;&quot; |=&quot;&quot; 余下全文=&quot;&quot;&gt;
 
 &lt;h2 id=&quot;What-is-IcoMoon&quot;&gt;&lt;a href=&quot;#What-is-IcoMoon&quot; class=&quot;headerlink&quot; title=&quot;What is IcoMoon ?&quot;&gt;&lt;/a&gt;What is IcoMoon ?&lt;/h2&gt;&lt;p&gt;昨儿个托我们美女UI的福，接触了&lt;a href=&quot;!https://icomoon.io/&quot;&gt;IcoMoon&lt;/a&gt;这个网站，之前确实没摸瑟过，原谅我孤陋寡闻，昨天小试了一下感觉不错，赶紧分享之。那么IcoMoon究竟是干哈的呢？接下来简单介绍下。&lt;/p&gt;
@@ -76,7 +76,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;Excerpt in index | 首页摘要&gt;&lt;br&gt;IcoMoon是一个在线的图标字体生成器。其允许我们通过个性化设置生成ICON字体，我们可以上传本地ICON资源也可以使用IcoMoon给我们提供的丰富素材，最终生成的ICON字体有多种格式供我们选择（EOT,SVG,WOFF,TTF）。总而言之，有了这个免费资源，我们就可以个性&lt;br&gt;化的生成ICON字体，然后应用到我们的WEB页面中了。&lt;br&gt;
+      &lt;p&gt;&lt;Excerpt in index | 首页摘要&gt;&lt;br&gt;IcoMoon是一个在线的图标字体生成器。其允许我们通过个性化设置生成ICON字体，我们可以上传本地ICON资源也可以使用IcoMoon给我们提供的丰富素材，最终生成的ICON字体有多种格式供我们选择（EOT,SVG,WOFF,TTF）。总而言之，有了这个免费资源，我们就可以个性化的生成ICON字体，然后应用到我们的WEB页面中了。&lt;br&gt;
     
     </summary>
     
