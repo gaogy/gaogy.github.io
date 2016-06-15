@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gaogy.github.io/"/>
-  <updated>2016-06-03T06:29:02.425Z</updated>
+  <updated>2016-06-15T03:38:20.462Z</updated>
   <id>http://gaogy.github.io/</id>
   
   <author>
@@ -14,6 +14,82 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用IcoMoon生成图标字体</title>
+    <link href="http://gaogy.github.io/2016/06/15/%E4%BD%BF%E7%94%A8IcoMoon%E7%94%9F%E6%88%90%E5%9B%BE%E6%A0%87%E5%AD%97%E4%BD%93/"/>
+    <id>http://gaogy.github.io/2016/06/15/使用IcoMoon生成图标字体/</id>
+    <published>2016-06-15T03:05:02.000Z</published>
+    <updated>2016-06-15T03:38:20.462Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;excerpt in=&quot;&quot; index=&quot;&quot; |=&quot;&quot; 首页摘要=&quot;&quot;&gt;&lt;br&gt;IcoMoon是一个在线的图标字体生成器。其允许我们通过个性化设置生成ICON字体，我们可以上传本地ICON资源也可以使用IcoMoon给我们提供的丰富素材，最终生成的ICON字体有多种格式供我们选择（EOT,SVG,WOFF,TTF）。总而言之，有了这个免费资源，我们就可以个性&lt;br&gt;化的生成ICON字体，然后应用到我们的WEB页面中了。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/excerpt&gt;&lt;/p&gt;
+&lt;the rest=&quot;&quot; of=&quot;&quot; contents=&quot;&quot; |=&quot;&quot; 余下全文=&quot;&quot;&gt;
+
+&lt;h2 id=&quot;What-is-IcoMoon&quot;&gt;&lt;a href=&quot;#What-is-IcoMoon&quot; class=&quot;headerlink&quot; title=&quot;What is IcoMoon ?&quot;&gt;&lt;/a&gt;What is IcoMoon ?&lt;/h2&gt;&lt;p&gt;昨儿个托我们美女UI的福，接触了&lt;a href=&quot;!https://icomoon.io/&quot;&gt;IcoMoon&lt;/a&gt;这个网站，之前确实没摸瑟过，原谅我孤陋寡闻，昨天小试了一下感觉不错，赶紧分享之。那么IcoMoon究竟是干哈的呢？接下来简单介绍下。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/2165169-a467bf89632f8abf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;IcoMoon.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;就我个人而言，往往要想找点什么ICON素材啊，往往都是酱婶滴，先去&lt;a href=&quot;!http://fontawesome.io/&quot;&gt;FontAwesome&lt;/a&gt;(在线图标字体库，但资源有限)里面巴拉巴拉，或者其他资源看看有没有合适的。如果没有就去求助我们大UI，笑笑给我来整个“加号”啊，笑笑有“减号”吗？来一个来一个，笑笑再给我来个“垃圾箱”呗…嗯，没错，我一般都是这么折磨我们UI的。个人还是比较喜欢FontAwesome，其提供的资源很丰富，风格很同意，而且直接在页面内引用需要的样式即可，不需要自己再去调整素材的样式。而我们今天要白话的IcoMoon，大致作用就是生成类似FontAwesome的图标字体。&lt;/p&gt;
+&lt;p&gt;IcoMoon是一个在线的图标字体生成器。其允许我们通过个性化设置生成ICON字体，我们可以上传本地ICON资源也可以使用IcoMoon给我们提供的丰富素材，最终生成的ICON字体有多种格式供我们选择（EOT,SVG,WOFF,TTF）。总而言之，有了这个免费资源，我们就可以个性&lt;br&gt;化的生成ICON字体，然后应用到我们的WEB页面中了。&lt;/p&gt;
+&lt;h2 id=&quot;生成自定义图标字体&quot;&gt;&lt;a href=&quot;#生成自定义图标字体&quot; class=&quot;headerlink&quot; title=&quot;生成自定义图标字体&quot;&gt;&lt;/a&gt;生成自定义图标字体&lt;/h2&gt;&lt;p&gt;当我们想要自己的图标图标字体时，操作步骤就如同把大象关进冰箱里，归纳起来可分为三步：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;准备自定义ICON素材 ;&lt;/li&gt;
+&lt;li&gt;生成字体文件;&lt;/li&gt;
+&lt;li&gt;在CSS中引用字体文件;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;A-准备自定义ICON素材&quot;&gt;&lt;a href=&quot;#A-准备自定义ICON素材&quot; class=&quot;headerlink&quot; title=&quot;A. 准备自定义ICON素材&quot;&gt;&lt;/a&gt;A. 准备自定义ICON素材&lt;/h3&gt;&lt;p&gt;此处需要注意的是，icomoon要求素材格式必须为SVG格式，所以其他格式的素材需提前转换，在此不做赘述。&lt;/p&gt;
+&lt;h3 id=&quot;B-生成图标字体&quot;&gt;&lt;a href=&quot;#B-生成图标字体&quot; class=&quot;headerlink&quot; title=&quot;B. 生成图标字体&quot;&gt;&lt;/a&gt;B. 生成图标字体&lt;/h3&gt;&lt;p&gt;到 &lt;a href=&quot;https://icomoon.io/app/#/select&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://icomoon.io/app/#/select&lt;/a&gt; 网站生成图标，具体过程如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;单击 &lt;code&gt;import icons&lt;/code&gt; 按钮 导入我们准备好的svg 图标，或者&lt;code&gt;Add Icons From Library&lt;/code&gt;引用这个网站上的一些现成图标。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/2165169-d91bb77a04b5dc03.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;导入素材.png&quot;&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;素材添加完成后，点击右下角&lt;code&gt;Font F&lt;/code&gt;按钮进入属性设置页面。&lt;br&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/2165169-f7bf42a11eeea058.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;字体设置.png&quot;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;点击&lt;code&gt;Preferences&lt;/code&gt;按钮，进行字体属性设置。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/2165169-41cc97d340a45ec8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;设置按钮.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;这里我们可以设置字体的名称，字体样式名称，以及对浏览器的兼容性&lt;br&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/2165169-0faa43f7a6bec1ed.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;字体属性.png&quot;&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;下载字体文件及demo，点击页面右下方的&lt;code&gt;Download&lt;/code&gt;按钮打包下载所有资源。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/2165169-bca961c248bc2832.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;下载字体及demo.png&quot;&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;解压下载后的压缩包，可以得到以下的文件夹 其中包括&lt;code&gt;demo&lt;/code&gt;，&lt;code&gt;style.css&lt;/code&gt; 及&lt;code&gt;fonts&lt;/code&gt;文件中的字体文件就是我们要的。使用时，一起拷贝到我们的项目中即可。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/2165169-5b5dddbbe82149a8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;压缩包.png&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;C-在项目中引用&quot;&gt;&lt;a href=&quot;#C-在项目中引用&quot; class=&quot;headerlink&quot; title=&quot;C 在项目中引用&quot;&gt;&lt;/a&gt;C 在项目中引用&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;将所要用的css 及字体文件放到一个文件夹中。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/2165169-fcfd2815456c6234.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;引入图标字体.png&quot;&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在index.html 中引入我们的css。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/2165169-07f715de1abee348.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;引入样式.png&quot;&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在需要的页面引用，直接加到相应标签的class属性中，作为样式引用即可。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/2165169-c046a98b7b211346.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;标签内引用.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;至此，Class is over！从此以后，UI再也不用担心你烦她了！&lt;/p&gt;
+&lt;/the&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;Excerpt in index | 首页摘要&gt;&lt;br&gt;IcoMoon是一个在线的图标字体生成器。其允许我们通过个性化设置生成ICON字体，我们可以上传本地ICON资源也可以使用IcoMoon给我们提供的丰富素材，最终生成的ICON字体有多种格式供我们选择（EOT,SVG,WOFF,TTF）。总而言之，有了这个免费资源，我们就可以个性&lt;br&gt;化的生成ICON字体，然后应用到我们的WEB页面中了。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="使用手顺" scheme="http://gaogy.github.io/categories/%E4%BD%BF%E7%94%A8%E6%89%8B%E9%A1%BA/"/>
+    
+    
+      <category term="前端" scheme="http://gaogy.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="UI" scheme="http://gaogy.github.io/tags/UI/"/>
+    
+      <category term="HTML" scheme="http://gaogy.github.io/tags/HTML/"/>
+    
+  </entry>
   
   <entry>
     <title>React学习笔记（二）—— 理解JSX</title>
